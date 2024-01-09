@@ -29,14 +29,18 @@ super + d
 
 # dedicated volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
-    pamixer --sink 52 { -i 5, -d 5}
+    pamixer {-i,-d} 5
 
 {XF86AudioMute}
-    wpctl set-mute 52 toggle
+    pamixer -t
 
 # dedicated backlight keys
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	brighntessctl s {5%+,5%-}
+
+# change keyboard layout
+super + {c,u}
+    switch_layout {can,us}
 
 # reload sxhkd
 super + shift + x
