@@ -20,6 +20,9 @@ super + Return
 super + b
     brave-browser-stable
 
+super + f
+    floorp
+
 super + d
     discord
 

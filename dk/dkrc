@@ -24,8 +24,8 @@ dpi="${dpiF%.*}"
 dpi=$(( dpi * 10))
 
 if [ $dpi -ge 140 ]; then
-	border_width=4
-    gap=10
+	border_width=2
+    gap=7
 elif [ $dpi -ge 120 ]; then
 	border_width=4
     gap=8
@@ -36,7 +36,7 @@ fi
 
 xrandr --dpi $dpi &
 
-feh --no-fehbg --bg-scale "$HOME/.config/dk/wallpapers/cli.jpg" &
+feh --no-fehbg --bg-scale "$HOME/.config/dk/wallpapers/ramen.jpg" &
 
 if hash compfy >/dev/null 2>&1; then
 	pkill compfy
@@ -83,7 +83,7 @@ dkcmd set tile_tohead=0 tile_hints=false
 dkcmd set win_minwh=50 win_minxy=10
 
 # disable gaps and borders in single window layouts
-dkcmd set smart_gap=false smart_border=true
+dkcmd set smart_gap=false smart_border=false
 
 # define mouse mod and move/resize buttons
 dkcmd set mouse mod=alt move=button1 resize=button3
@@ -92,12 +92,13 @@ dkcmd set mouse mod=alt move=button1 resize=button3
 dkcmd set obey_motif=true
 
 # Set the border width and colour of unfocused windows
-dkcmd set border width=$border_width colour focus='#33AAFF' unfocus='#B4B8BD' urgent='#ee5555'
+dkcmd set border width=$border_width colour focus='#89c2a2' unfocus='#7493cb' urgent='#ee5555'
 
 # Rules
 
 dkcmd rule class="^Brave-browser$" ws=2
 dkcmd rule class="^discord$" ws=3
+dkcmd rule class="^floorp$" ws=2 full=true focus=true
 
 } >> "$logfile" 2>&1 # append responses
 
