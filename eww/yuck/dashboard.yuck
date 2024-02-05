@@ -1,27 +1,27 @@
-(defwindow sysinfo
+(defwindow dashboard
   :stacking "fg"
   :exclusive false
   :windowtype "normal"
-  :wm-ignore false
+  :wm-ignore true
   :geometry (geometry
   :x "69%"
   :y "10%"
   :width "30%"
   :height "40%"
   :anchor "top left")
-  (sysmenu_event))
+  (dash_event))
 
-(defwidget sysmenu_event []
+(defwidget dash_event []
   (eventbox
-    :class "sysmenu-handler"
-    :onhoverlost "scripts/actions sysmenu"
-    (sysmenu)
+    :class "dashboard-handler"
+    :onhoverlost "scripts/actions dashboard"
+    (dashboard)
     )
   )
 
-(defwidget sysmenu []
+(defwidget dashboard []
   (box
-    :class "sysmenu"
+    :class "dashboard"
     :orientation "v"
     :spacing 10
     :spacing-evenly true

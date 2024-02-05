@@ -10,17 +10,18 @@ symbol() {
     strength=$(get_strength)
 
     if [ "$connected" -eq 1 ]; then
-        if [ "$strength" -ge 75 ]; then
-            echo "󰤥"
-        elif [ "$strength" -ge 50 ]; then
-            echo "󰤢"
-        elif [ "$strength" -ge 25 ]; then
-            echo "󰤟"
+        if [ "$strength" -le 75 ]; then
+            echo "󰤥 "
+        elif [ "$strength" -le 50 ]; then
+            echo "󰤢 "
+        elif [ "$strength" -le 25 ]; then
+            echo "󰤟 "
         else
-            echo "󰤨"
+            echo "󰤨 "
         fi
-    else
-        echo "󰤮"
+    fi
+    if connected -eq 0; then
+        echo "󰤮 "
     fi
 }
 

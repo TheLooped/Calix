@@ -7,17 +7,17 @@
               :width "40%"
               :height "20%"
               :anchor "center")
-  (menu_event))
+  (powmenu_event))
 
-(defwidget menu_event []
+(defwidget powmenu_event []
   (eventbox
-    :class "menu-handler"
+    :class "powmenu-handler"
     :onhoverlost "scripts/actions powermenu"
-    (menu)
+    (powmenu)
     )
   )
 
-(defwidget menu []
+(defwidget powmenu []
   (box
     :class "powmenu"
     :orientation "h"

@@ -22,7 +22,7 @@ update_battery_icon() {
     if [ "$state" -eq 1 ]; then
     case $battery_level in
         [0-9])
-            icon="󰁺" ;; # Set icon for 0-9 range
+            icon="󰂎" ;; # Set icon for 0-9 range
         1[0-9])
             icon="󰁻" ;; # Set icon for 10-19 range
         2[0-9])
@@ -47,7 +47,7 @@ update_battery_icon() {
     else
     case $battery_level in
         [0-9])
-            icon="󱎗" ;; # Set icon for 0-9 range
+            icon="󰢟" ;; # Set icon for 0-9 range
         1[0-9])
             icon="󰢜" ;; # Set icon for 10-19 range
         2[0-9])
@@ -71,7 +71,7 @@ update_battery_icon() {
     esac
     fi
 
-    echo "$icon"
+    echo "$icon "
 }
 
 
@@ -101,7 +101,7 @@ notify_battery() {
             fi
             ;;
         "Charging")
-            if [ "$capacity" -ge 90 ]; then
+            if [ "$capacity" -ge 40 ]; then
                 notify-send -u low -t "$timeout" -c "$category" "Battery almost fully charged" "Battery level: $capacity%"
             elif [ "$capacity" -eq 100 ]; then
                 notify-send -u low -t "$timeout" -c "$category" "Battery fully charged" "Battery level: $capacity%"

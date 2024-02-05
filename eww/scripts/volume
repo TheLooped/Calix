@@ -22,12 +22,17 @@ get_percentage () {
 
 
 get_icon() {
-  local vol=$(get_percentage)
-  if [ "$vol" == "0%" ]; then
-    echo "󰝟"
-  else
-    echo "" 
-  fi
+    local vol=$(echo "$(get_vol) * 100" | bc)
+    local muted=$(is_muted)
+    if [ "$vol" -eq 0 ]  || [ "$muted" = "yes" ]; then
+        echo "󰝟 "
+    elif [ "$vol" -le 50 ]; then 
+        echo " "
+    elif [ "$vol" -le 80 ]; then
+        echo "󰕾 "
+    else
+        echo " "
+    fi
 }
 
 get_vol() {

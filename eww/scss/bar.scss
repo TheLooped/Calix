@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bar {
+  background-color: $starry-night;
+}
+
+// Workspace styles
+.workspace {
+    padding: 3px;
+    margin: 3px 10px 0px 10px;
+    font-family: "Maple Mono NF";
+    font-size: 18px;
+    //background-color: $cosmic-void;
+}
+
+.workspace-focused {
+  font-family: inherit;
+  font-size: inherit;
+  color: $electric-teal;
+}
+
+.workspace-occupied {
+  font-family: inherit;
+  font-size: inherit;
+  color: $sunset-green;
+  transition: color 0.5s ease-in-out;
+
+  &:hover {
+    color: #0DAC15;
+    transition: color 0.5s ease-in-out;
+  }
+}
+
+.workspace-empty {
+  font-family: inherit;
+  font-size: inherit;
+  color: $blush-pink;
+  transition: color 0.5s ease-in-out;
+
+  &:hover {
+    color: #AA5AAB;
+    transition: color 0.5s ease-in-out;
+  }
+}
+
+// System box styles
+.sysbox {
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: $cosmic-void;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .sysinfo {
+    font-family: "Pitagon Sans Mono";
+    font-weight: 700;
+    margin-left: 4px;
+
+    .battery-widget {
+      color: $galactic-blue;
+      font-size: 20px; // Consistent font size
+      font-family: inherit;
+    }
+    .volume-widget {
+      color: $galactic-blue;
+      font-size: 20px; // Consistent font size
+      font-family: inherit;
+    }
+    .network-widget {
+      color: $galactic-blue;
+      font-size: 20px; // Consistent font size
+      font-family: inherit;
+    }
+  }
+}
+
+// Other module styles
+.wintitle {
+  font-family: "Monospace Xenon";
+  font-size: 18px;
+  font-weight: 600;
+  color: $dazzling-orange;
+}
+
+.clock {
+  color: $bright-blue;
+  font-family: 'Monospace Krypton';
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0px 10px 0px 10px;
+}
+
+.layouts {
+  font-size: 20px;
+  font-family: "Pitagon Sans Mono";
+  color: $cream-puff;
+  margin: 0px 10px 0px 10px;
+}
+
+.logo {
+  font-family: "Pitagon Sans Mono";
+  font-size: 25px;
+
+  .dispatcher {
+    color: $sunset-green;
+    border-radius: 7px;
+    padding: 0px 8px;
+  }
+}
+
+.powerbutton {
+  color: $solar-flare;
+  font-family: "Pitagon Sans Mono";
+  font-size: 25px;
+  margin: 0px 0px 0px 10px;
+}

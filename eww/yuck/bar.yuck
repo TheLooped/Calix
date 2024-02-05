@@ -1,0 +1,96 @@
+(defwindow bar
+  :monitor 0 ;; Optional for X11
+  :stacking "fg"
+  :exclusive true
+  :windowtype "dock"
+  :reserve (struts :distance "50px" :side "top")
+  :wm-ignore false
+  :geometry (geometry
+              :x "0%"
+              :y "0%"
+              :width "100%"
+              :height "35px"
+              :anchor "top center")
+  (bar))
+
+(defwidget bar []
+  (centerbox :class "bar"
+       :orientation "h"
+       :valign "center"
+       (left)
+       (center)
+       (right)))
+
+(defwidget left []
+  (box :orientation "h"
+       :space-evenly false
+       :halign "start"
+       :class "left"
+       (logo)
+       (workspaces)))
+
+(defwidget center []
+  (box :orientation "h" 
+       :space-evenly false
+       :halign "center"
+       :class "center"
+       (wintitle)))
+
+(defwidget right []
+  (box :orientation "h"   
+       :space-evenly false
+       :halign "end"
+       :class "right"
+       (clock)
+       (sysinfo)
+       (layout)
+       (powerbutton)))
+
+(defwidget workspaces []
+  (box :class "workspace"
+       :orientation "h"
+       (literal :content workspace)))
+
+(defwidget wintitle []
+  (label :class "wintitle"
+         :limit-width 21
+         :text wintitle))
+
+(defwidget clock []
+  (box :class "clock"
+       (label :text clock)))
+
+(defwidget sysinfo []
+  (eventbox
+    :onclick "scripts/actions dashboard"
+    :class "sysbox"
+    (box :orientation "h"
+         :class "sysinfo"
+         :space-evenly false
+         :spacing 10
+         (eventbox :class "network-widget"
+           (label :text "${network_icon}"))
+         (eventbox :class "volume-widget" 
+           (label :text "${volume_icon}"))
+         (eventbox :class "battery-widget"
+           (label :text "${battery_icon}")))))
+
+(defwidget layout []
+  (box :orientation "h"
+       (button :class "layouts"
+               :tooltip "Change current layout"
+               :onclick "scripts/cycle_layout"
+               (label :text layout :justify "center"))))
+
+(defwidget logo []
+  (box :orientation "h"
+       :class "logo"
+       :tooltip "Launch apps"
+       (button :class "dispatcher" :onclick "rofi -show drun &" "")))
+
+(defwidget powerbutton []
+  (eventbox 
+    :onclick "scripts/actions powmenu"
+    (box :class "powerbutton"
+         :orientation "h"
+         (label :text " ⏻ "))))

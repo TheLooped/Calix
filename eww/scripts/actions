@@ -4,13 +4,13 @@ popup_powermenu() {
     eww open powermenu --toggle
 }
 
-popup_sysmenu() {
-    eww open sysinfo --toggle
+popup_dashboard() {
+    eww open dashboard --toggle
 }
 
 case "$1" in
-    powermenu ) popup_powermenu;;
-    sysmenu) popup_sysmenu ;;
+    powmenu ) popup_powermenu;;
+    dashboard) popup_dashboard ;;
     *)
         echo "Unkown action"
         exit 1

@@ -1,5 +1,5 @@
-.sysmenu-handler{
-    background-color: $bg;
+.dashboard-handler{
+    background-color: $cosmic-void;
 }
 
 .battery {
@@ -31,7 +31,7 @@
     font-weight: 700;
     padding: 3px 7px 0px 7px;
     margin: 3px 7px 0px 7px;
-    color: $mint;
+    color: $tea-green;
 }
 
 
@@ -39,7 +39,7 @@
     .network-icon{
         font-size: 2em;
         font-family: "Monspace Argon";
-        color: $mauve;
+        color: $seafoam;
     }
     .network-label{
         font-family: "Monospace Neon";

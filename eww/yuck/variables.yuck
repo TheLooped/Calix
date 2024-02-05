@@ -3,8 +3,8 @@
 
 (deflisten workspace "scripts/workspace")
 (deflisten wintitle "scripts/wintitle")
-(defpoll clock  :interval "1s" "scripts/clock")
 (deflisten layout "scripts/layout") 
+(defpoll clock  :interval "1s" "scripts/clock")
 
 (defpoll network_status :interval "1s" "scripts/network status")
 (defpoll network_icon :interval "1s" "scripts/network icon")

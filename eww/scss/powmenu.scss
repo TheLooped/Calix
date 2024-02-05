@@ -1,5 +1,6 @@
 .powmenu {
-    background-color: $bg;
+    background-color: $cosmic-void;
+    border-radius: 10px;
 }
 
 .lock {
@@ -8,7 +9,7 @@
         font-size: 5em;
         font-family: "Maple Mono NF";
         padding: 7px;
-        color: $pink;
+        color: $dusty-pink;
     }
 }
 
@@ -17,7 +18,7 @@
     .logout-icon{
         font-size: 5em;
         font-family: "Maple Mono NF";
-        color: $teal;
+        color: $neon-teal;
     }
 }
 
@@ -25,7 +26,7 @@
     .reboot-icon{
         font-size: 5em;
         font-family: "Maple Mono NF";
-        color: $lemon;
+        color: $lemon-chiffon;
     }
 }
 
@@ -33,6 +34,6 @@
     .shutdown-icon {
         font-size: 5em;
         font-family: "Maple Mono NF";
-        color: $mauve;
+        color: $solar-flare;
     }
 }

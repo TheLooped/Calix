@@ -26,11 +26,11 @@ get_layout_icon() {
 
     # Set the current layout icon based on the layout of the current desktop
     case ${layout_array[$current_desktop]} in
-        grid)   layout_icon=" 󰕰 " ;;
-        tile)   layout_icon="  " ;;
-        mono)   layout_icon=" 󱗝 " ;;
-        dwindle)layout_icon="  " ;;
-        *)      layout_icon="  " ;;
+        grid)   layout_icon="󰕰" ;;
+        tile)   layout_icon="" ;;
+        mono)   layout_icon="󱗝" ;;
+        dwindle)layout_icon="" ;;
+        *)      layout_icon="" ;;
     esac
 
     # Return the layout icon
