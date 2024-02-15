@@ -34,6 +34,7 @@
        :space-evenly false
        :halign "center"
        :class "center"
+       (tray_widget)
        (wintitle)))
 
 (defwidget right []
@@ -45,6 +46,18 @@
        (sysinfo)
        (layout)
        (powerbutton)))
+
+(defwidget tray_widget []
+	(box
+        :class "tray-widget"
+        :space-evenly false
+        (label :text "" :class "tray-prefix")
+        (box :class "tray-content"
+            (systray 
+              :pack-direction "rtl"
+              ))
+        (label :class "tray-suffix")
+))
 
 (defwidget workspaces []
   (box :class "workspace"
@@ -63,6 +76,7 @@
 (defwidget sysinfo []
   (eventbox
     :onclick "scripts/actions dashboard"
+    :valign "center"
     :class "sysbox"
     (box :orientation "h"
          :class "sysinfo"
@@ -73,7 +87,7 @@
          (eventbox :class "volume-widget" 
            (label :text "${volume_icon}"))
          (eventbox :class "battery-widget"
-           (label :text "${battery_icon}")))))
+           (label :text "${battery_icon}" :style "margin-right: 15px;")))))
 
 (defwidget layout []
   (box :orientation "h"

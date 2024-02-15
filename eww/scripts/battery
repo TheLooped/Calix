@@ -71,7 +71,7 @@ update_battery_icon() {
     esac
     fi
 
-    echo "$icon "
+    echo "$icon"
 }
 
 

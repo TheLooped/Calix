@@ -59,6 +59,7 @@
     font-family: "Pitagon Sans Mono";
     font-weight: 700;
     margin-left: 4px;
+    padding-left: 4px;
 
     .battery-widget {
       color: $galactic-blue;
@@ -98,7 +99,7 @@
   font-size: 20px;
   font-family: "Pitagon Sans Mono";
   color: $cream-puff;
-  margin: 0px 10px 0px 10px;
+ //margin: 0px 10px 0px 10px;
 }
 
 .logo {
@@ -117,4 +118,19 @@
   font-family: "Pitagon Sans Mono";
   font-size: 25px;
   margin: 0px 0px 0px 10px;
+}
+
+.tray-widget {
+    background-color: $twilight-blue;
+    border-radius: 10px;
+    border: 3px solid;
+    margin: 0px 5px;
+    border-color: $vivid-purple;
+    color: $neon-pink;
+}
+.tray-prefix {
+  font-size: 18px;
+  font-family: "Pitagon Sans Mono";
+  color: $neon-pink;
+  padding: 0px 15px 0px 10px;
 }
